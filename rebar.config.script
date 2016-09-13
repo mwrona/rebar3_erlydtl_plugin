@@ -13,7 +13,7 @@ NewCfg = case application:get_key(syntax_tools, vsn) of
         Deps = [{merl, ".*", {git, "https://github.com/Licenser/merl.git", {branch, "master"}}},
                 {erlydtl, "",
                          {git, "https://github.com/erlydtl/erlydtl.git",
-                          {branch, "master"}}}],
+                            {tag, "0.8.0"}}}],
 
         Overrides =
           [{override, erlydtl,
@@ -36,7 +36,7 @@ NewCfg = case application:get_key(syntax_tools, vsn) of
     _ ->
         [{deps, [{erlydtl, "",
                         {git, "https://github.com/erlydtl/erlydtl.git",
-                         {branch, "master"}}}]}]
+                            {tag, "0.8.0"}}}]}]
 end,
 
 lists:foldl(
